@@ -1,24 +1,31 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app_bindings.dart';
-import 'package:flutter_app/forgot_password/bindings.dart';
-import 'package:flutter_app/forgot_password/widget.dart';
-import 'package:flutter_app/home/bindings.dart';
-import 'package:flutter_app/home/widget.dart';
-import 'package:flutter_app/login/bindings.dart';
-import 'package:flutter_app/logout/widget.dart';
+import 'package:flutter_app/pages.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'login/widget.dart';
-
 void main() {
-  runApp(MyApp());
+  var localeUS = Locale('en', 'US');
+  runApp(EasyLocalization(
+    supportedLocales: [
+      Locale('vi', 'VN'),
+      localeUS,
+    ],
+    path: 'assets/translations',
+    fallbackLocale: localeUS,
+    useOnlyLangCode: true,
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,

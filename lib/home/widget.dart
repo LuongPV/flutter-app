@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 import '../logger.dart';
 import 'controller.dart';
@@ -15,6 +16,14 @@ class HomeWidget extends GetWidget<HomeController> {
         child: Column(
           children: [
             Text('This is Home Screen'),
+            SizedBox(
+              height: 20,
+            ),
+            Text(StringTranslateExtension('tit_welcome').tr()),
+            SizedBox(
+              height: 20,
+            ),
+            Text('txt_welcome').tr(),
             SizedBox(
               height: 20,
             ),
