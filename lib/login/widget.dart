@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/login/data.dart';
+import 'package:flutter_app/routes.dart';
 import 'package:get/get.dart';
 
 import 'controller.dart';
@@ -37,7 +38,7 @@ class LoginWidget extends StatelessWidget {
             FlatButton(
               child: Text('Open Logout'),
               onPressed: () {
-                Get.toNamed('/logout', arguments: LoginData(69, 'login69'));
+                Get.toNamed(ROUTE_LOGOUT, arguments: LoginData(69, 'login69'));
               },
             ),
             FlatButton(

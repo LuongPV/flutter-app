@@ -1,3 +1,4 @@
+import 'package:flutter_app/routes.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 import 'forgot_password/bindings.dart';
@@ -11,22 +12,22 @@ import 'logout/widget.dart';
 List<GetPage> getPages() {
   return [
     GetPage(
-      name: '/',
+      name: ROUTE_HOME,
       page: () => HomeWidget(),
       binding: HomeBindings(),
     ),
     GetPage(
-      name: '/login',
+      name: ROUTE_LOGIN,
       page: () => LoginWidget(),
       binding: LoginBindings(),
     ),
     GetPage(
-      name: '/logout',
+      name: ROUTE_LOGOUT,
       page: () => LogoutWidget(),
       bindings: [],
     ),
     GetPage(
-      name: '/forgot_password',
+      name: ROUTE_FORGOT_PASSWORD,
       page: () => ForgotPasswordWidget(),
       bindings: [
         ForgotPasswordBindings(),

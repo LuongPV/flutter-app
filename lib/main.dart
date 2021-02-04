@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app_bindings.dart';
 import 'package:flutter_app/pages.dart';
+import 'package:flutter_app/routes.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       enableLog: true,
       initialBinding: AppBindings(),
-      initialRoute: '/',
+      initialRoute: ROUTE_HOME,
       getPages: getPages(),
     );
   }
