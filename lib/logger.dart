@@ -1,9 +1,9 @@
 import 'package:flutter_app/log_printer.dart';
-import 'package:logger/logger.dart' as LoggerLibrary;
+import 'package:logger/logger.dart' as logger_library;
 
 class Logger {
   static final Logger _instance = Logger._internal();
-  final _nativeLogger = LoggerLibrary.Logger(
+  final _nativeLogger = logger_library.Logger(
     printer: SimpleLogPrinter(),
   );
 
