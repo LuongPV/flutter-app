@@ -27,30 +27,7 @@ class MyApp extends StatelessWidget {
       enableLog: true,
       initialBinding: AppBindings(),
       initialRoute: '/',
-      getPages: [
-        GetPage(
-          name: '/',
-          page: () => HomeWidget(),
-          binding: HomeBindings()
-        ),
-        GetPage(
-          name: '/login',
-          page: () => LoginWidget(),
-          binding: LoginBindings()
-        ),
-        GetPage(
-          name: '/logout',
-          page: () => LogoutWidget(),
-          bindings: []
-        ),
-        GetPage(
-          name: '/forgot_password',
-          page: () => ForgotPasswordWidget(),
-          bindings: [
-            ForgotPasswordBindings()
-          ]
-        )
-      ]
+      getPages: getPages(),
     );
   }
 }
