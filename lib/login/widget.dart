@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/login/data.dart';
 import 'package:get/get.dart';
 
-import '../logout/widget.dart';
 import 'controller.dart';
 
 class LoginWidget extends StatelessWidget {
@@ -10,7 +9,6 @@ class LoginWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = Get.arguments;
-    print('data login = $data');
     return Scaffold(
       appBar: AppBar(
           title: GetBuilder<LoginController>(
@@ -36,7 +34,6 @@ class LoginWidget extends StatelessWidget {
             FlatButton(
               child: Text('Open Logout'),
               onPressed: () {
-                print('Open logout ...');
                 Get.toNamed('/logout', arguments: LoginData(69, 'login69'));
               }
             )

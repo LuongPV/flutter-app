@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/app_bindings.dart';
 import 'package:flutter_app/forgot_password/bindings.dart';
 import 'package:flutter_app/forgot_password/widget.dart';
+import 'package:flutter_app/home/bindings.dart';
 import 'package:flutter_app/home/widget.dart';
 import 'package:flutter_app/login/bindings.dart';
 import 'package:flutter_app/logout/widget.dart';
@@ -26,17 +27,11 @@ class MyApp extends StatelessWidget {
       enableLog: true,
       initialBinding: AppBindings(),
       initialRoute: '/',
-      routes: {
-        '/': (context) => HomeWidget(),
-        '/login': (context) => LoginWidget(),
-        '/logout': (context) => LogoutWidget(),
-        '/forgot_password': (context) => ForgotPasswordWidget()
-      },
       getPages: [
         GetPage(
           name: '/',
           page: () => HomeWidget(),
-          binding: null
+          binding: HomeBindings()
         ),
         GetPage(
           name: '/login',

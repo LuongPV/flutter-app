@@ -9,7 +9,6 @@ class LogoutWidget extends GetWidget<LoginController> {
   @override
   Widget build(BuildContext context) {
     final data = Get.arguments;
-    print('data logout = $data');
     return Scaffold(
       appBar: AppBar(
           title: Text('Logout $data')
